@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{video.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+  <ion-card>
+    <video id="video" width="910px" height="540px" controls autoplay playsinline></video>
+    <ion-card-header>
+      <ion-card-title>{{video.title}}</ion-card-title>
+      <ion-card-subtitle>{{video.speaker}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{video.description}}
+    </ion-card-content>
+  </ion-card>
+  </div>
+</ion-content>
