@@ -19,7 +19,20 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 </head>
 
+
 <body>
+<script>
+  import Hls from "hls.js";
+
+  if (Hls.isSupported()) {
+    var video = document.getElementById('video');
+    var hls = new Hls();
+    hls.loadSource(video.src);
+    hls.attachMedia(video);
+  }else{
+    alert("Cannot stream HLS, use another video source");
+  }
+</script>
   <app-root></app-root>
 </body>
 
